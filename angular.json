@@ -24,7 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/vela-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-pipesApp"
+    }
+  },
+  "defaultProject": "angular-pipesApp",
+  "cli": {
+    "analytics": "5dd4c2dc-a1c3-436e-93e5-8514a1c0b6d1"
+  }
 }
