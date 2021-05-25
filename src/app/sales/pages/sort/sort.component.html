@@ -1,1 +1,6 @@
-<p>sort works!</p>
+<div class="text-layout">
+    <h3>Custom Pipes</h3>
+    <p>Pipes built by {{ name | capitalLetters:isUppercase }}</p>
+    <button pButton (click)="toggleUppercase()" label="Toggle uppercase">
+    </button>
+</div>

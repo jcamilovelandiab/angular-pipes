@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortComponent implements OnInit {
 
+  name: string = 'Hello World!';
+  isUppercase: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleUppercase(){
+    this.isUppercase = !this.isUppercase;
   }
 
 }

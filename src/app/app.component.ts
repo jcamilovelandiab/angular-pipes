@@ -7,10 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  name: string = 'Camilo';
   title = 'angular-pipesApp';
-  value = 1000;
-  jsonObject: any = {
-    name: 'hey there'
-  }
+
 }
