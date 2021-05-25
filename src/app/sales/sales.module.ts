@@ -10,6 +10,7 @@ import { SortComponent } from './pages/sort/sort.component';
 
 import { CapitalLettersPipe } from './pipes/capital-letters.pipe';
 import { FlyPipe } from './pipes/fly.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FlyPipe } from './pipes/fly.pipe';
     BasicsComponent,
     SortComponent,
     CapitalLettersPipe,
-    FlyPipe
+    FlyPipe,
+    SortPipe
   ],
   exports: [
     NumbersComponent,

@@ -2,7 +2,7 @@ export enum Color {
     red, black, blue, green
 }
 
-export interface Heroe {
+export interface Hero {
     name: string;
     fly: boolean;
     color: Color;

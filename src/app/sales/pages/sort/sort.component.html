@@ -7,37 +7,40 @@
     <div class="p-toolbar-group-right">
         <button
             pButton
-            (click)="toggleUppercase()"
             label="Toggle uppercase"
             class="p-mr-1 p-button-warning"
+            (click)="toggleUppercase()"
         ></button>
         <button
             pButton
             icon="pi pi-sort"
             label="By name"
             class="p-mr-1"
+            (click)="setOrderBy('name')"
         ></button>
         <button
             pButton
             icon="pi pi-sort"
-            label="Values"
+            label="By fly"
             class="p-mr-1 p-button-success"
+            (click)="setOrderBy('fly')"
         ></button>
         <button
             pButton
             icon="pi pi-sort"
             label="By color"
             class="p-mr-1 p-button-help"
+            (click)="setOrderBy('color')"
         ></button>
     </div>
 </p-toolbar>
 
 <div class="p-grid">
     <div class="p-col p-mt-2">
-        <p-table [value]="heroes">
+        <p-table [value]="heroes | sort:orderBy">
             <ng-template pTemplate="header">
                 <tr>
-                    <th>Code</th>
+                    <th>Name</th>
                     <th>Fly</th>
                     <th>Quantity</th>
                 </tr>

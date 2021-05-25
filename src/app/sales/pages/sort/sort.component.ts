@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Color, Heroe } from '../../interfaces/sales.interfaces';
+import { Color, Hero } from '../../interfaces/sales.interfaces';
 
 @Component({
   selector: 'app-sort',
@@ -11,7 +11,7 @@ export class SortComponent implements OnInit {
 
   name: string = 'Hello World!';
   isUppercase: boolean = false;
-  heroes: Heroe[] = [
+  heroes: Hero[] = [
     {
       name: 'Superman',
       fly: true,
@@ -39,6 +39,8 @@ export class SortComponent implements OnInit {
     }
   ];
 
+  orderBy: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -46,6 +48,10 @@ export class SortComponent implements OnInit {
 
   toggleUppercase(){
     this.isUppercase = !this.isUppercase;
+  }
+
+  setOrderBy( value: string ) {
+    this.orderBy = value;
   }
 
 }
