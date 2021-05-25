@@ -48,6 +48,15 @@
                 <li> Date | DatePipe: long </li>
                 <li> Date | DatePipe: HH:mm, dd LLL yyyy </li>
             </ul>
+
+            <hr>
+            <ul>
+                <li> date | date:'long':'GMT-6' </li>
+                <li> date | date:'long':'GMT-4' </li>
+                <li> date | date:'long':'':'en' </li>
+                <li> date | date:'long':'':'fr' </li>
+                <li> date | date:'long':'':'es-CO' </li>
+            </ul>
         </p-card>
     </div>
     <div class="p-col-6">
@@ -58,6 +67,15 @@
                 <li> {{ date | date: 'short' }} </li>
                 <li> {{ date | date: 'long' }} </li>
                 <li> {{ date | date: 'HH:mm, dd LLLL yyyy' }} </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li> {{ date | date:'long':'GMT-6' }} </li>
+                <li> {{ date | date:'long':'GMT-4' }} </li>
+                <li> {{ date | date:'long':'':'en' }} </li>
+                <li> {{ date | date:'long':'':'fr' }} </li>
+                <li> {{ date | date:'long':'':'es-CO' }} </li>
             </ul>
         </p-card>
     </div>
