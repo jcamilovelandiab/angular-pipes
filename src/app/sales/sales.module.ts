@@ -9,6 +9,7 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
 
 import { CapitalLettersPipe } from './pipes/capital-letters.pipe';
+import { FlyPipe } from './pipes/fly.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CapitalLettersPipe } from './pipes/capital-letters.pipe';
     NotCommonComponent,
     BasicsComponent,
     SortComponent,
-    CapitalLettersPipe
+    CapitalLettersPipe,
+    FlyPipe
   ],
   exports: [
     NumbersComponent,
