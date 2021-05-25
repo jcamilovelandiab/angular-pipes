@@ -1,1 +1,20 @@
-<p>not-common works!</p>
+<div class="text-layout">
+    <h1>Not so common pipes</h1>
+    <p>
+        Included pipes in Angular - Usually in the Common Module.
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col p-md-6">
+        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+            Hi {{ name }}. It is a pleasure to invite you to our event.
+            <p>{{ name }} is {{ gender | i18nSelect: genderMap }}</p>
+        </p-fieldset>
+    </div>
+    <div class="p-col p-md-6">
+        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+            Currently, we have {{ customers.length | i18nPlural:customersMap }}
+        </p-fieldset>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-not-common',
@@ -8,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotCommonComponent implements OnInit {
 
-  constructor() { }
+  //i18nSelect
+  name: string = 'Camilo';
+  gender: string = 'male';
+  genderMap = {
+    'male': 'man',
+    'female': 'woman'
+  };
 
-  ngOnInit(): void {
+  //i18nPlural
+  customers: string[] = ['Michael', 'Jess'];
+  customersMap = {
+    '=0': 'no customers on hold.',
+    '=1': 'a customer on hold.',
+    'other': '# customers on hold.'
+  };
+
+  constructor( private primengConfig: PrimeNGConfig ) {}
+  
+  ngOnInit(){
+    this.primengConfig.ripple = true;
   }
 
 }
