@@ -12,6 +12,8 @@ export class BasicsComponent {
   uppercaseName: string = 'CAMILO';
   fullName: string = 'cAmIlO vElAndIa';
 
+  date: Date = new Date();
+
   constructor() { }
 
 }

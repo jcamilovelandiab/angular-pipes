@@ -31,3 +31,34 @@
         </p-card>
     </div>
 </div>
+
+<div class="text-layout">
+    <h1>Date | Pipe</h1>
+    <p>
+        Pipe to show dates
+    </p>
+</div>
+<div class="p-grid">
+    <div class="p-col-6">
+        <p-card>
+            <ul>
+                <li> Date </li>
+                <li> Date | DatePipe </li>
+                <li> Date | DatePipe: short </li>
+                <li> Date | DatePipe: long </li>
+                <li> Date | DatePipe: HH:mm, dd LLL yyyy </li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="p-col-6">
+        <p-card>
+            <ul>
+                <li> {{ date }} </li>
+                <li> {{ date }} </li>
+                <li> {{ date | date: 'short' }} </li>
+                <li> {{ date | date: 'long' }} </li>
+                <li> {{ date | date: 'HH:mm, dd LLLL yyyy' }} </li>
+            </ul>
+        </p-card>
+    </div>
+</div>

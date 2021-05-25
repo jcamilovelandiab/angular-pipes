@@ -1,11 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 
+// Custom modules
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SalesModule } from './sales/sales.module';
+
+// Change app's locale
+import localEs from '@angular/common/locales/es-CO';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData( localEs );
 
 @NgModule({
   declarations: [
@@ -18,16 +25,11 @@ import { SalesModule } from './sales/sales.module';
     SharedModule,
     SalesModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es-CO' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-
-  name: string = 'Camilo';
-  jsonObject
-
-  showName() {
-    console.log(this.name);
-  }
 
 }
