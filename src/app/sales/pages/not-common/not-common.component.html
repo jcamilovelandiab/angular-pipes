@@ -28,4 +28,36 @@
             Delete customer
         </p-button>
     </div>
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <b>Original</b>
+            <pre> {{ customers }} </pre>
+            
+            <b>slicie:0:2</b>
+            <pre> {{ customers | slice: 0:2 }} </pre>
+
+            <b>slicie:1:3</b>
+            <pre> {{ customers | slice: 1:3 }} </pre>
+
+            <b>slicie:3:3</b>
+            <pre> {{ customers | slice:3:3 }} </pre>
+
+            <b>slicie:3:4</b>
+            <pre> {{ customers | slice:3:4 }} </pre>
+        </p-fieldset>
+    </div>
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Json Pipe" [toggleable]="true">
+            <pre>{{ heroes | json }}</pre>
+        </p-fieldset>
+    </div>
+    <div class="p-col p-md-6">
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let item of person | keyvalue">
+                    <b>{{ item.key }}:</b>: {{ item.value }}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
 </div>
