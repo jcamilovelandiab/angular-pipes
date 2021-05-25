@@ -18,7 +18,7 @@ export class NotCommonComponent implements OnInit {
   };
 
   //i18nPlural
-  customers: string[] = ['Michael', 'Jess'];
+  customers: string[] = ['Michael', 'Jess', 'Frank', 'Joan'];
   customersMap = {
     '=0': 'no customers on hold.',
     '=1': 'a customer on hold.',
@@ -29,6 +29,15 @@ export class NotCommonComponent implements OnInit {
   
   ngOnInit(){
     this.primengConfig.ripple = true;
+  }
+
+  changePerson(){
+    this.name = 'Tess';
+    this.gender = 'female';
+  }
+
+  deleteCustomer() {
+    this.customers.shift();
   }
 
 }

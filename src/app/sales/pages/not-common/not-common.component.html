@@ -8,13 +8,24 @@
 <div class="p-grid">
     <div class="p-col p-md-6">
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-            Hi {{ name }}. It is a pleasure to invite you to our event.
-            <p>{{ name }} is {{ gender | i18nSelect: genderMap }}</p>
+            <p>Hi {{ name }}. It is a pleasure to invite you to our event.
+                {{ name }} is a {{ gender | i18nSelect: genderMap }}</p>
         </p-fieldset>
+        <button
+            pButton
+            label="Change person"
+            (click)="changePerson()"
+            class="p-button-help"
+        >
+        </button>
     </div>
+
     <div class="p-col p-md-6">
         <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
             Currently, we have {{ customers.length | i18nPlural:customersMap }}
         </p-fieldset>
+        <p-button (onClick)="deleteCustomer()">
+            Delete customer
+        </p-button>
     </div>
 </div>
